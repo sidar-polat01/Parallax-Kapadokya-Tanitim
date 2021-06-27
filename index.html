@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rehberim</title>
+    <link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Rehberim</a>
+        <ul>
+            <li><a href="#" class="active">Ana Sayfa</a></li>
+            <li><a href="#sec" id="gezi">Geziler</a></li>
+            <li><a href="#tarihce" id="hakkında">Hakkında</a></li>
+            <li><a href="#">İletişim</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="sun.png" id="moon" alt="resim">
+        <img src="bulut.png" id="stars" alt="resim">
+        <img src="balonlar.png" id="mountains_behind" alt="resim">
+        <h2 id="text">Kapadokya</h2>
+        <a href="#sec" id="btn">Keşfet</a>
+        <img src="daglar.png" id="mountains_front" alt="resim">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Keşfedilecek Yerler</h2>
+        <h3>Kapadokya</h3>
+        <div class="Kapadokya" id="Kapadokya">
+            <img src="kapadokya2.jpg" id="kapadokya" alt="resimdir">
+            <p>Kapadokya bölgesi, doğa ve tarihin bütünleştiği bir yerdir. Coğrafi olaylar Peribacaları’nı oluştururken, tarihi süreçte, insanlar da bu peribacalarının içlerine evler,
+                 kiliseler ve manastırlar oymuş bunları fresklerle süsleyerek binlerce yıllık medeniyetlerin izlerini günümüze taşımıştır.
+                  İnsan yerleşimlerinin Paleolitik döneme kadar uzandığı Kapadokya’nın yazılı tarihi Hititlerle başlar. 
+                Tarih boyunca ticaret kolonilerini barındıran ve ülkeler arasında ticari ve sosyal bir köprü kuran Kapadokya, İpek Yolu’nun da önemli kavşaklarından biridir.</p>
+        </div>
+        <h3>Tarihçe</h3>
+        <div class="tarihce" id="tarihce">
+            <p>Kapadokya, 60 milyon yıl önce Erciyes, Hasandağı ve Güllüdağ’ın püskürttüğü lav ve küllerin oluşturduğu yumuşak tabakaların milyonlarca yıl boyunca yağmur ve rüzgar tarafından aşındırılmasıyla ortaya çıkan bölgedir.
+                Kapadokya, Pers dilinde Güzel Atlar Ülkesi anlamına geliyor. Bu güzel ülke, dünyada daha önce gördüğünüz hiç bir yere benzemeyen bir coğrafyaya sahip. Bu nedenledir ki her yıl dünyanın dört bir tarafından yüz binlerce ziyaretçi alıyor.
+            </p>
+            <img src="kapadokya.jpg" id="kapadok" alt="resimdir">
+        </div>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            stars.style.left = value * 1.25 + 'px';
+            moon.style.top = value * 2.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.left = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 0.7 + 'px';
+            btn.style.marginTop = value * 0.5 + 'px';
+        })
+    </script>
+    <footer id="footer">
+        <h2>Daha fazlası için bize ulaşın</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ab eos repudiandae sunt obcaecati eveniet ad ipsam provident aliquid vero maiores, vitae culpa possimus ex beatae aliquam quia, corrupti distinctio.</p>
+        <ul>
+            <li><a href="#">Ana Sayfa</a></li>
+            <li><a href="#sec">Geziler</a></li>
+            <li><a href="#tarihce">Hakkında</a></li>
+            <li><a href="#">İletişim</a></li>
+
+        </ul>
+        
+    </footer>
+</body>
+</html>
